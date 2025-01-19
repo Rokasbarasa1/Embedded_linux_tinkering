@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+// Ubuntu VNC connection testing
+sudo reboot
+sudo apt install xllvnc
+sudo nano /lib/systemd/system/xllvnc.service
+systemctl daemon-reload
+systemctl enable xllvnc.service
+systemctl start xllvnc.service
+vncserver -kill :l
+systemctl status xllvnc.service
+sudo nano /lib/systemd/system/xllvnc.service
+
+
+// Yocto build scripts i think
+sudo apt install -y which ed make binutils build-essential diffutils gcc g++ bash patch gzip bzip2 perl tar cpio unzip rsync file bc findutils
+sudo apt install wget
+sudo apt install ncurses5
+make raspberrypi4_64_defconfig
+ls output/build/images
+ls output/images
+lsblk
+sudo dd if=output/images/sdcard.img of=/dev/sdbbs=1M
+picocom -b 115200 /dev/ttyUSB0
+cd rpi-build
+source ./oe-init-build-env
+source poky/oe-init-build-env rpi-build
+bitbake-layers show-layers
+bitbake -c menuconfig virtual/kernel
+bitbake core-image-minimal-dev
