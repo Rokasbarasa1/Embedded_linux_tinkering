@@ -1,5 +1,5 @@
-#include <Linux/module.h>
-#include <Linux/init.h>
+#include <linux/module.h>
+#include <linux/init.h>
 
 /* Meta Information */
 MODULE_LICENSE("GPL");
@@ -15,5 +15,7 @@ static int __init ModuleInit(void){
 // Called when this module is removed from kernel
 static void __exit ModuleExit(void){
     printk("Goodbye, Kernel!\n");
-
 }
+
+module_init(ModuleInit)
+module_exit(ModuleExit)
