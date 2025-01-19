@@ -3,9 +3,7 @@
 
 
 ## Kernel drivers
-Kernel driver writing happens on the current computer. It does not need to be the Linux one. To get into the RPI using windows command line, use "ssh pi@<IP_OF_RPI>" then the pasword is just "pi". Dont use Putty.
-
-The kernel drivers are stored in "/home/pi/Desktop". Just "cd Desktop" once you loggin.
+Kernel driver writing happens on the current computer. It does not need to be the Linux one. Then the code is copied over to the RPI. To get started, connect the RPI to power. Open windows command line, use "ssh pi@<IP_OF_RPI>" then the pasword is just "pi". Dont use Putty. The kernel drivers are stored in "/home/pi/Desktop". Just "cd Desktop" once you loggin. In this directory you can initialize the kernel drivers you make.
 
 I think the OS i am using is a Raspberry PI OS 64 bit.
 
